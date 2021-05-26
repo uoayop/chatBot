@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mogakko</title>
+</head>
+<body>
+    <div id="mo_txt">모</div>
+    <div id="gak_txt">각</div>
+    <div id="ko_txt">코</div>
+
+    <div class="buttons">
+        <button onclick="mo_btn()">모</button>
+        <button onclick="gak_btn()">각</button>
+        <button onclick="ko_btn()">코</button>
+    </div>
+
+    <script src="./mogakko.js"></script>
+</body>
+</html>
+
+<style>
+    .buttons{
+        display: flex; 
+        flex-direction: row;
+        margin-top: 3px;
+    }
+
+    .buttons > button{
+        margin-right: 3px;
+    }
+
+</style>
