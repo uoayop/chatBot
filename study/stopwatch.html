@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StopWatch</title>
+    <style>
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+    <h2 id="time">00:00:00</h2>
+    <div class="buttons">
+        <button id="start_btn" onclick="start()">시작</button>
+        <button id="stop_btn"  onclick="stop()">멈춤</button>
+        <button id="init_btn" onclick="init()">초기화</button>
+    </div>
+    <script src="./stopwatch.js"></script>
+</body>
+</html>
