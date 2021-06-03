@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="movie.css">
+    <title>My Favorite Movie 💖</title>
+</head>
+<body>
+    <H1>My Favorite Movie 💖</H1>
+    <div class="buttons">
+        <button onclick="toystory()">토이스토리</button>
+        <button onclick="soul()">소울</button>
+        <button onclick="lalaland()">라라랜드</button>
+        <button onclick="abouttime()">어바웃타임</button>
+        <button onclick="singstreet()">싱스트릿</button>
+    </div>
+
+    <div class="divider"></div>
+    
+    <div class="movie">
+        <div style="display: flex; align-items: baseline;">
+            <h2 id="title"></h2> <span id="year"></span>
+        </div>
+        <img id="still">
+        <h3 id="quotes"></h3>
+    </div>
+
+    <script src="./movie.js"></script>
+</body>
+</html>
