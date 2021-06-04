@@ -1,0 +1,59 @@
+body{
+    margin:0;
+    width:100vw;
+    height: 100vh;
+}
+
+.phone{ 
+    width: 400px;
+    height: 700px;
+    background-color: rgb(243, 243, 243);
+    border-radius: 30px;
+    border: 2px solid rgb(165, 165, 165);
+    box-shadow: 2px 2px 20px rgb(83, 83, 83);
+
+    animation-duration: 0.5s;
+    animation-name: slidein;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#call-icon, #call-end-icon{
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+}
+
+.call-in-display{
+    position: absolute;
+}
+
+.call-in-display #number{
+    margin-bottom: 355px;
+}
+
+.calling-display{
+    display: none;
+}
+
+.calling-display #call-count{
+    margin-bottom: 320px;
+    padding-top: 15px;
+}
+
+@keyframes slidein {
+    from {
+        margin-left: 1%;
+    }
+
+    to {
+        margin-left: -1%;
+    }
+}

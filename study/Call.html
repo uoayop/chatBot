@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Call.css">
+    <title>전화 걸기</title>
+</head>
+<body class="center">
+    <div class="phone center">
+        <div class="call-in-display center">
+            <h2>엄마 🖤</h2>
+            <span id="number">010-XXXX-XXXX</span>
+
+            <img src="./img/call.png" id="call-icon" onclick="answer()">
+
+        </div>
+
+        <div class="calling-display center">
+            <h2>엄마 🖤</h2>
+            <span id="number">010-XXXX-XXXX</span>
+            <span id="call-count">00:00</span>
+
+            <img src="./img/call-end.png" id="call-end-icon" onclick="hangup()">
+        </div>
+    </div>
+
+    <script src="./Call.js"></script>
+</body>
+</html>
