@@ -5,22 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="font.css">
     <link rel="stylesheet" href="layout.css">
-    <!-- <script src="javascript.js"></script> -->
+    <script src="./javascript.js"></script>
     <title>ChatBot</title>
 </head>
 <body>
     <div class="content-container">
-        <div class="bot-message">
-            <span>안녕 ~~ !</span>
+        <div class="bot-message-wrapper">
+            <span id="bot-message">안녕 ~~ !</span>
         </div>
-        <div class="bot-image">
-            <img src="./bot-image.png" alt="hamster" width="120px">
+        <div class="bot-image-wrapper">
+            <img src="./bot-image.png" alt="hamster" width="120px" id="bot-image">
         </div>
-        <div class="input-message">
-            <input type="text">
+        <div class="input-message-wrapper">
+            <input type="text" id="input-message" onkeyup="enterkey();">
         </div>
         <div class="send-btn">
-            <button>시키기</button>
+            <button onclick="ordered()">시키기</button>
         </div>
     </div>
 </body>

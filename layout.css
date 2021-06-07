@@ -13,7 +13,7 @@ body{
     align-items: center
 }
 
-.bot-message{
+.bot-message-wrapper{
     width: 300px;
     height: 100px;
     display: flex;
@@ -24,17 +24,39 @@ body{
     border-radius: 5px;
 }
 
-.bot-message > span{
+#bot-message{
     color: #353535;
     font-family: 'DungGeunMo';
 }
 
-.bot-image, .input-message{
+.dontknow{
+    animation-duration: 0.5s;
+    animation-name: animate;
+    animation-iteration-count: 2;
+    animation-direction: alternate;
+}
+
+@keyframes animate {
+    from { }
+  
+    to {
+        transform:rotate(90deg);
+        -moz-transform: scaleX(-1); 
+        -o-transform: scaleX(-1); 
+        -webkit-transform: scaleX(-1); 
+        transform: scaleX(-1);   
+        filter: FlipH;
+        -ms-filter: "FlipH";
+    }
+  }
+
+
+.bot-image, .input-message-wrapper{
     margin: 20px 0px;
 }
 
-.input-message > input{
-    width: 200px;
+.input-message-wrapper > input{
+    width: 300px;
     height: 30px;
     text-align: center;
     font-size: 15px;
@@ -45,7 +67,7 @@ body{
     border-image-slice: 1;
 }
 
-.input-message > input:focus{
+.input-message-wrapper > input:focus{
     outline: none;
     border-image-source: linear-gradient(rgb(211, 179, 0), rgba(226, 184, 66, 0.5));
     border-width: 3px;
@@ -67,3 +89,4 @@ body{
 .send-btn > button:hover{
     background-color: #e7c08d;
 }
+
