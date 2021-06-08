@@ -6,30 +6,59 @@ function enterkey() {
 }
 
 function ordered(){
-    console.log(this);
-    var bot_message = document.getElementById('bot-message');
     var input_message = document.getElementById('input-message');
-
+    
     if ((input_message.value).indexOf('이름') > -1){
-        bot_message.innerText = '내 이름은 아리야 >.<';
+        setBotMessage('내 이름은 아리야 >.<');
+    }
+    else if ((input_message.value).indexOf('눈부셔') > -1){
+        setBotMessage('앗! 불 꺼줄게~!');
+        brightness('OFF');
+    }
+    else if ((input_message.value).indexOf('어두워') > -1){
+        setBotMessage('그래?! 불 켜줄게~!');
+        brightness('ON');
     }
     else{
-        bot_message.innerText = '무슨 말인지 모르겠어 ㅠㅡㅠ';
-        animate();
+        setBotMessage('무슨 말인지 모르겠어 ㅠㅡㅠ');
+        NodAnimate();
     }
 
-    input_message.innerText = '';
+    input_message.innerText = "";
     typing();
 }
 
-function animate(){
+function setBotMessage(msg){
+    var bot_message = document.getElementById('bot-message');
+    bot_message.innerText = msg;
+}
+
+function brightness(order){
+    var background = document.getElementsByTagName('body')[0];
+    var input_message = document.getElementById('input-message');
+    var bot_message = document.getElementById('bot-message');
+
+    if (order === 'OFF'){
+        background.style.backgroundColor = '#000';
+        input_message.style.backgroundColor = '#323232';
+        input_message.style.color = '#fff';
+        bot_message.style.color = '#fff'
+    }
+    else{
+        background.style.backgroundColor = '#fff';
+        input_message.style.backgroundColor = '#fff';
+        input_message.style.color = '#000';
+        bot_message.style.color = '#000'
+    }
+}
+
+function NodAnimate(){
     var target = document.getElementById('bot-image');
     if (target.classList.contains('dontknow')){
         target.classList.remove("dontknow");
     }
     target.classList.add("dontknow");
 }
-
 
 function typing(){
     var bot_message = document.getElementById('bot-message');
