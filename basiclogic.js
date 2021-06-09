@@ -7,9 +7,14 @@ function enterkey() {
 
 function ordered(){
     var input_message = document.getElementById('input-message');
-    
+    setBotImage();
+
     if ((input_message.value).indexOf('이름') > -1){
         setBotMessage('내 이름은 아리야 >.<');
+        setBotImage('happy');
+    }
+    else if ((input_message.value).indexOf('안녕') > -1){
+        setBotMessage('반가워!');
     }
     else if ((input_message.value).indexOf('눈부셔') > -1){
         setBotMessage('앗! 불 꺼줄게~!');
@@ -19,8 +24,28 @@ function ordered(){
         setBotMessage('그래?! 불 켜줄게~!');
         brightness('ON');
     }
+    else if ((input_message.value).indexOf('춤') > -1){
+        setBotMessage('난 우울할 땐 힙합을 춰!');
+        setBotImage('dance');
+        DanceAnimate();
+    }
+    else if ((input_message.value.indexOf('멋져') > -1)){
+        setBotMessage('헤헤 고마워~~ 🖤');
+        setBotImage('happy');
+    }
+    else if ((input_message.value.indexOf('저리가') > -1)){
+        setBotMessage('끙,, 알겠어,,');
+        MoveAnimate();
+        setBotImage('sad');
+    }
+    else if ((input_message.value.indexOf('돌아와') > -1)){
+        setBotMessage('나 불렀어 ?!');
+        BackAnimate();
+        setBotImage('happy');
+    }
     else{
         setBotMessage('무슨 말인지 모르겠어 ㅠㅡㅠ');
+        setBotImage('sad');
         NodAnimate();
     }
 
@@ -52,38 +77,12 @@ function brightness(order){
     }
 }
 
-function NodAnimate(){
+function setBotImage(name){
     var target = document.getElementById('bot-image');
-    if (target.classList.contains('dontknow')){
-        target.classList.remove("dontknow");
+    if (name == null){
+        target.src = './bot-image.png'; 
     }
-    target.classList.add("dontknow");
+    else{
+        target.src = './bot-image-' + name + '.png'; 
+    }
 }
-
-function typing(){
-    var bot_message = document.getElementById('bot-message');
-    
-    var typingBool = false;
-    var index=0; 
-    var target = bot_message.innerText.split(""); // 타이핑될 텍스트를 가져와서 한글자씩 자른다.
-    bot_message.innerText = '';
-
-    var temp = '';
-
-    if (typingBool == false){ // 타이핑이 진행되지 않았다면 
-        typingBool = true; 
-        var tyInt = setInterval(typing,100); // 반복동작 
-    } 
-
-    function typing(){ 
-        if (index < target.length){ // 타이핑될 텍스트 길이만큼 반복 
-            temp += target[index]; // 한글자씩 이어준다. 
-            bot_message.innerText = temp;
-            index++; 
-        } else{ 
-            clearInterval(tyInt); //끝나면 반복종료 
-        }    
-    }  
-
-}
-

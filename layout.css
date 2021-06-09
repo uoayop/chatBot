@@ -29,28 +29,6 @@ body{
     font-family: 'DungGeunMo';
 }
 
-.dontknow{
-    animation-duration: 0.5s;
-    animation-name: animate;
-    animation-iteration-count: 2;
-    animation-direction: alternate;
-}
-
-@keyframes animate {
-    from { }
-  
-    to {
-        transform:rotate(90deg);
-        -moz-transform: scaleX(-1); 
-        -o-transform: scaleX(-1); 
-        -webkit-transform: scaleX(-1); 
-        transform: scaleX(-1);   
-        filter: FlipH;
-        -ms-filter: "FlipH";
-    }
-  }
-
-
 .bot-image, .input-message-wrapper{
     margin: 20px 0px;
 }

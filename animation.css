@@ -1,0 +1,70 @@
+
+.dontknow{
+    animation-duration: 0.3s;
+    animation-name: NodAnimate;
+    animation-iteration-count: 2;
+    animation-direction: alternate;
+}
+
+@keyframes NodAnimate {
+    from { }
+  
+    to {
+        transform:rotate(90deg);
+        -moz-transform: scaleX(-1); 
+        -o-transform: scaleX(-1); 
+        -webkit-transform: scaleX(-1); 
+        transform: scaleX(-1);   
+        filter: FlipH;
+        -ms-filter: "FlipH";
+    }
+}
+
+.dance{
+    animation-duration: 0.5s;
+    animation-name: DanceAnimate;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes DanceAnimate {
+    from { 
+        transform:rotate(0deg);
+        width : 120px;
+    }
+  
+    to {
+        transform:rotate(360deg);
+        width: 160px;
+    }
+}
+
+.move, .back{
+    animation-duration: 1s;
+    animation-name: MoveAnimate;
+    animation-iteration-count: 1;
+    animation-direction: alternate;
+}
+
+@keyframes MoveAnimate {
+    from { 
+    }
+  
+    to {
+        margin-left: 2000px;
+    }
+}
+
+.back{
+    animation-direction: reverse;
+}
+
+@keyframes MoveAnimate {
+    from { 
+        margin-left: 0px;
+    }
+  
+    to {
+        margin-left: 2000px;
+    }
+}
