@@ -1,23 +1,36 @@
-
-.dontknow{
-    animation-duration: 0.3s;
-    animation-name: NodAnimate;
-    animation-iteration-count: 2;
-    animation-direction: alternate;
+.bounce{
+    animation: bounce;
+    animation-duration: 0.5s;
 }
 
-@keyframes NodAnimate {
-    from { }
-  
-    to {
-        transform:rotate(90deg);
-        -moz-transform: scaleX(-1); 
-        -o-transform: scaleX(-1); 
-        -webkit-transform: scaleX(-1); 
-        transform: scaleX(-1);   
-        filter: FlipH;
-        -ms-filter: "FlipH";
-    }
+.swing{
+    animation: swing;
+    animation-duration: 0.5s;
+}
+
+.tada{
+    animation: tada;
+    animation-duration: 0.5s;
+}
+
+.jello{
+    animation: jello;
+    animation-duration: 1s;
+}
+
+.shakeX{
+    animation: shakeX;
+    animation-duration: 1s;
+}
+
+.goaway{
+    animation: bounceOutRight;
+    animation-duration: 1s;
+}
+
+.comeback{
+    animation: bounceInLeft;
+    animation-duration: 1s;
 }
 
 .dance{
