@@ -26,11 +26,13 @@
 .goaway{
     animation: bounceOutRight;
     animation-duration: 1s;
+    animation-delay: 0.2s;
 }
 
 .comeback{
     animation: bounceInLeft;
-    animation-duration: 1s;
+    animation-duration: 0.8s;
+    animation-delay: 0.2s;
 }
 
 .dance{

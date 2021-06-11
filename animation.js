@@ -62,34 +62,30 @@ function Animate(class_name) {
 }
 
 function MoveAnimate() {
-  setTimeout(() => {
-    var target = document.getElementById("bot-image");
-    try {
-      target.classList.add("goaway");
-    } catch (error) {
-    } finally {
-      setTimeout(() => {
-        target.style.opacity = "0";
-        target.className = "";
-      }, 1000);
-    }
-  }, 500);
+  var target = document.getElementById("bot-image");
+  try {
+    target.classList.add("goaway");
+  } catch (error) {
+  } finally {
+    setTimeout(() => {
+      target.style.opacity = "0";
+      target.className = "";
+    }, 500);
+  }
 }
 
 function BackAnimate() {
-  setTimeout(() => {
-    var target = document.getElementById("bot-image");
-    target.style.opacity = "1";
-    try {
-      target.classList.add("comeback");
-    } catch (error) {
-    } finally {
-      setTimeout(() => {
-        target.className = "";
-        //   target.style.marginLeft = "0px";
-      }, 1100);
-    }
-  }, 500);
+  var target = document.getElementById("bot-image");
+  target.style.opacity = "1";
+  try {
+    target.classList.add("comeback");
+  } catch (error) {
+  } finally {
+    setTimeout(() => {
+      target.className = "";
+      //   target.style.marginLeft = "0px";
+    }, 700);
+  }
 }
 
 function typing(str) {
